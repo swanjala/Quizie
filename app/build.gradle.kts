@@ -77,6 +77,8 @@ dependencies {
         implementation("com.squareup.retrofit2:converter-scalars:${this["version_retrofit"]}")
         implementation("com.squareup.retrofit2:converter-moshi:${this["version_retrofit"]}")
 
+        implementation("com.squareup.moshi:moshi:${this["version_moshi"]}")
+
         // test
         testImplementation("junit:junit:4.13.2")
         androidTestImplementation("androidx.test.ext:junit:1.1.5")

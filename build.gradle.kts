@@ -5,6 +5,7 @@ buildscript {
     extra.apply {
         set("version_dagger", "2.48")
         set("version_retrofit", "2.9.0")
+        set("version_moshi","1.14.0")
     }
 }
 plugins {
