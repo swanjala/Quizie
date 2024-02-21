@@ -7,6 +7,7 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
+@Suppress("UNCHECKED_CAST")
 open class QuizieApp : Application(),HasAndroidInjector {
 
     @Inject
