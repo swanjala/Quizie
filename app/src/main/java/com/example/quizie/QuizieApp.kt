@@ -2,6 +2,7 @@ package com.example.quizie
 
 import android.app.Activity
 import android.app.Application
+import com.example.quizie.dependencies.AppInjector
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
