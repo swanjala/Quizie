@@ -63,6 +63,7 @@ dependencies {
         implementation("androidx.compose.ui:ui-graphics")
         implementation("androidx.compose.ui:ui-tooling-preview")
         implementation("androidx.compose.material3:material3")
+        implementation("io.coil-kt:coil-compose:2.0.0-rc01")
 
         //dagger
         implementation("com.google.dagger:dagger:${this["version_dagger"]}")
@@ -70,12 +71,16 @@ dependencies {
         implementation("com.google.dagger:dagger-android-support:${this["version_dagger"]}")
         kapt("com.google.dagger:dagger-android-processor:${this["version_dagger"]}")
 
+        //moshi
+        implementation("com.squareup.moshi:moshi:${this["version_moshi"]}")
+        implementation("com.squareup.moshi:moshi-kotlin:${this["version_moshi"]}")
+
         //retrofit
         implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
         implementation("com.squareup.retrofit2:converter-moshi:${this["version_retrofit"]}")
         implementation("com.squareup.retrofit2:retrofit:${this["version_retrofit"]}")
         implementation("com.squareup.retrofit2:converter-scalars:${this["version_retrofit"]}")
-        implementation("com.squareup.retrofit2:converter-moshi:${this["version_retrofit"]}")
+//        implementation("com.squareup.retrofit2:converter-moshi:${this["version_retrofit"]}")
 
         implementation("com.squareup.moshi:moshi:${this["version_moshi"]}")
 
@@ -87,5 +92,12 @@ dependencies {
         androidTestImplementation("androidx.compose.ui:ui-test-junit4")
         debugImplementation("androidx.compose.ui:ui-tooling")
         debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+        //navigation
+        implementation("androidx.navigation:navigation-fragment-ktx:${this["version_navigation"]}")
+        implementation("androidx.navigation:navigation-ui-ktx:${this["version_navigation"]}")
+
+        //Gson
+        implementation("com.google.code.gson:gson:2.10.1")
     }
 }
