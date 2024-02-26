@@ -35,7 +35,7 @@ class QuestionsViewModel @Inject constructor(
     val questionCount: StateFlow<Int> = _questionCount.asStateFlow()
 
     private var _accumulatedScore = MutableStateFlow<Int>(1)
-    val accumulatedScore: StateFlow<Int> = _accumulatedScore.asStateFlow()
+    val accumulatedScore: StateFlow<Int> = _accumulatedScore.asStateFlow() // unused to be implemented in the completion state
 
     private lateinit var questions: List<Questions>
 
@@ -61,10 +61,10 @@ class QuestionsViewModel @Inject constructor(
         correctAnswer: Boolean,
         correctText: String,
         userSelectedPosition: Int,
-        score: Int // to be used in completion state, not implemented
+        score: Int
     ) {
         if (correctAnswer) {
-            _accumulatedScore.value = accumulatedScore.value + 1
+            _accumulatedScore.value = accumulatedScore.value + score
         }
         _uiScreenTypeState.value = AnswerState(
             correctAnswer,

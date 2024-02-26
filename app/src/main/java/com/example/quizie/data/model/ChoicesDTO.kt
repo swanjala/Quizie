@@ -13,7 +13,3 @@ data class ChoicesDTO(
     )
 }
 
-data class Choices(
-    val answer: String,
-    val correct: Boolean
-)
