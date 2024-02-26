@@ -2,6 +2,7 @@ package com.example.quizie.dependencies
 
 import com.example.quizie.data.network.NetworkService
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -29,6 +30,14 @@ class NetworkModule {
         return OkHttpClient.Builder().apply {
             addInterceptor(loggingInterceptor)
         }.build()
+    }
+
+    @Singleton
+    @Provides
+    fun provideMoshi(): Moshi {
+        return Moshi.Builder()
+            .add(KotlinJsonAdapterFactory())
+            .build()
     }
 
     @Singleton
