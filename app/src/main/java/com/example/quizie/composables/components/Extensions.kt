@@ -29,4 +29,3 @@ fun Spanned.toAnnotatedString(): AnnotatedString = buildAnnotatedString {
 fun Int.answerTopIconPredicate(): Boolean {
     return this@answerTopIconPredicate.mod(2) == 0
 }
-
