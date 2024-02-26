@@ -1,4 +1,4 @@
-package com.example.quizie.composables
+package com.example.quizie.composables.model
 
 sealed class ScreenTypeState {
     data class QuestionState(
@@ -9,5 +9,5 @@ sealed class ScreenTypeState {
         val correctnessText: String? = "Wrong",
         val selectedAnswerPosition: Int = 0
     ) : ScreenTypeState()
-    data class CompletionState(val score: Int): ScreenTypeState()
+    data class CompletionState(val score: Int): ScreenTypeState() // todo implement a completion state
 }
