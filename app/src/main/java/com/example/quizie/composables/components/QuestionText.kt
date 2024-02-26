@@ -29,7 +29,6 @@ fun QuestionText(questionText: String) {
         Text(
             modifier = Modifier
                 .background(Color.White)
-               // .height(intrinsicSize = IntrinsicSize.Min)
                 .padding(horizontal = 30.dp, vertical = 10.dp)
                 .align(Alignment.CenterStart),
             text = fromHtml(questionText, FROM_HTML_MODE_COMPACT).toAnnotatedString(),
