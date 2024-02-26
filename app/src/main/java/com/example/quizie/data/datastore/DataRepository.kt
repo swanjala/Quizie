@@ -10,10 +10,8 @@ interface DataRepository {
 class DataRepositoryImpl @Inject constructor(
     private val questionsRemoteDataStore: QuestionsRemoteDataStore,
 ) : DataRepository {
-
     override suspend fun fetchRemoteQuestions(): List<Questions> {
         return questionsRemoteDataStore.fetchQuestions()
     }
-
 }
 

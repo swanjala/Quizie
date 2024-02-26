@@ -20,8 +20,9 @@ class QuestionsViewModel @Inject constructor(
 ) : ViewModel() {
 
     // Screen type and ui content
-    private var _uiScreenTypeState =
-        MutableStateFlow<ScreenTypeState>(QuestionState(isTimedOut = false))
+    private var _uiScreenTypeState = MutableStateFlow<ScreenTypeState>(
+        QuestionState(isTimedOut = false)
+    )
     val screenTypeState: StateFlow<ScreenTypeState> = _uiScreenTypeState.asStateFlow()
 
     private var _uiContent = MutableStateFlow(initialSetter())

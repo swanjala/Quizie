@@ -70,7 +70,6 @@ fun HeaderText(
 fun HeaderIconText(
     content: @Composable () -> Unit
 ) {
-
     QuestionHeaderItemsContainer {
         Row(
             modifier = Modifier

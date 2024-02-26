@@ -83,7 +83,6 @@ fun CommonScreen(
                     Spacer(modifier = Modifier.height(20.dp))
                 }
 
-
                 is AnswerState -> {
                     with(screenTypeState as AnswerState) {
                         correctnessText?.let {

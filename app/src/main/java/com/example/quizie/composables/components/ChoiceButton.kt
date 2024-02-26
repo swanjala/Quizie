@@ -115,10 +115,8 @@ private fun choiceButtonResourceSelector(
 
     return when (uiState) {
         is AnswerState -> {
-            val userSelectionIndex = uiState.selectedAnswerPosition.coerceIn(0..3)
-
             when (position) {
-                userSelectionIndex -> {
+                uiState.selectedAnswerPosition -> {
                     if (uiState.correctAnswer) {
                         Color(0xFF66BF39) to R.drawable.icon_correct
                     } else {
@@ -133,7 +131,6 @@ private fun choiceButtonResourceSelector(
                         Color(0xFFFF99AA) to R.mipmap.wrong
                     }
                 }
-
             }
         }
 
@@ -165,3 +162,4 @@ fun ChoiceButtonPreview() {
         )
     }
 }
+
